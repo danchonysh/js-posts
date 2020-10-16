@@ -1,0 +1,119 @@
+.tab {
+	width: min(500px, 50%);
+	margin: 4rem  auto 0;
+}
+
+.add {
+	position: absolute;
+	left: 50%;
+	top: 6.5rem;
+	transform: translate(-50%, -50%);
+	flex: 0 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .75rem;
+	border-radius: 50%;
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: inherit;
+	border: solid 1px lightgray;
+	color: gray;
+	font-size: 1rem;
+	transition-property: opacity, background-color, border-color;
+	transition-duration: .2s;
+}
+
+.add:hover {
+	border-color: rgb(252, 199, 102);
+	background-color: rgb(252, 199, 102);
+	color: white;
+	cursor: pointer;
+}
+
+.add:active {
+	background-color: tomato;
+	border-color: tomato;
+}
+
+.vanish {
+	opacity: 0;
+}
+
+.tab__list {
+	height: 2rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+}
+
+.tab__list-item {
+	width: 5rem;
+	text-align: center;
+	border: solid 1px gray;
+	padding: .25rem .75rem;
+	transition-property: color, background-color, border-color;
+	transition-duration: .2s;
+}
+
+.tab__list-item:hover {
+	cursor: pointer;
+	background: rgb(252, 199, 102);
+	border-color: rgb(252, 199, 102);
+	color: white;
+}
+
+.tab__list-item.active {
+	color: white;
+	border-color: tomato;
+	background-color: tomato;
+}
+
+.tab__list-item:first-child {
+	border-right: none;
+	border-radius: 5px 0 0 5px;
+}
+.tab__list-item:last-child {
+	border-left: none;
+	border-radius: 0 5px 5px 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.tab__item {
+	padding: 0 .5rem
+}
+
+.tab__item.show {
+	animation: showTab .3s;
+}
+
+@keyframes showTab {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%); 
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.tab__item.hide {
+	animation: hideTab .3s;
+}
+
+@keyframes hideTab {
+	0% {
+		opacity: 1;
+		transform: translateX(0); 
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+}
+

@@ -1,0 +1,156 @@
+header {
+	background: whitesmoke;
+	flex: 0 0 auto;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+footer {	
+	background: #222222;
+	flex: 0 0 auto;
+}
+
+.header {
+	padding: .25rem .75rem;
+	text-align: center;
+}
+
+.header__title {
+	font-weight: 500;
+}
+
+.content {
+	margin: 30px auto;
+}
+
+.content__item {
+	margin: 20px;
+}
+
+.footer {
+	color: #777777;
+	padding: .25rem .75rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.link-list {
+	list-style-type: none;
+}
+
+.link-list__item a, .link-list__item a:visited{
+	text-decoration: none;
+	color: inherit;
+	transition: color .2s;
+}
+
+.link-list__item a:hover, .link-list__item a:active{
+	cursor:pointer;
+	color: aqua;
+}
+
+
+
+.footer__copyright {
+	font-size: .75rem;
+	flex: 0 1 50%;
+	text-align: right;
+}
+
+.post {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: .25rem .75rem;
+	border-radius: 5px;
+	margin: 1rem auto;
+	box-shadow: 0 3px 5px 3px rgba(0,0,0,.3);
+	min-width: min-content;
+	max-width: 500px;
+}
+
+.post__photo {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.post__delete {
+	position: absolute;
+	left: calc(100% - 3rem);
+	font-size: 2rem;
+	opacity: 0;
+	color: #f9f9f9;
+	transition-property: opacity, color, transform;
+	transition-duration: .2s;
+}
+
+.post__delete:hover {
+	cursor: pointer;
+	color: red;
+	transform: scale(1.1);
+}
+
+.post:hover .post__delete {
+	opacity: 1;
+}
+
+.post__photo {
+	filter: brightness(100%);
+	transition: filter .2s;
+}
+
+.post:hover .post__photo {
+	filter: brightness(75%)
+}
+
+.post:hover .post__delete:active {
+	transform: scale(.95);
+	color: rgba(255, 50, 50, 1);
+}
+
+.article {
+	width: min(500px, 100%);
+	position: relative;
+	padding: .25rem .75rem;
+	margin: 1rem auto;
+	border-radius: 5px;
+	box-shadow: 0 3px 5px 3px rgba(0,0,0,.3)
+}
+
+.article__title {
+	margin-right: 1rem;
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+
+.article__content {
+	font-size: .75rem;
+}
+
+.article__delete {
+	position: absolute;
+	left: calc(100% - 1.5rem);
+	bottom: calc(100% - 1.5rem);
+	transform: scale(1.2);
+	transition: color .2s, transform .2s
+}
+
+.article__delete:hover {
+	color: red;
+	cursor: pointer;
+}
+
+.article__delete:active {
+	transform: scale(1);
+}
+
+
+
+
+
